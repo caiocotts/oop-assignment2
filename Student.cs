@@ -4,9 +4,9 @@ public class Student {
     private static int studentCounter;
     private int studentID;
     private string name;
-    private string[] enrolledCourses;
+    private string enrolledCourses;
 
-    public Student(string name, string[] enrolledCourses) {
+    public Student(string name, string enrolledCourses) {
         this.name = name;
         this.enrolledCourses = enrolledCourses;
         studentCounter++;
