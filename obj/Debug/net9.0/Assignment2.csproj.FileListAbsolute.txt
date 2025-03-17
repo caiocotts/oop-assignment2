@@ -1,0 +1,14 @@
+/Users/caio/School/sem2/oop/Assignment2/bin/Debug/net9.0/Assignment2
+/Users/caio/School/sem2/oop/Assignment2/bin/Debug/net9.0/Assignment2.deps.json
+/Users/caio/School/sem2/oop/Assignment2/bin/Debug/net9.0/Assignment2.runtimeconfig.json
+/Users/caio/School/sem2/oop/Assignment2/bin/Debug/net9.0/Assignment2.dll
+/Users/caio/School/sem2/oop/Assignment2/bin/Debug/net9.0/Assignment2.pdb
+/Users/caio/School/sem2/oop/Assignment2/obj/Debug/net9.0/Assignment2.GeneratedMSBuildEditorConfig.editorconfig
+/Users/caio/School/sem2/oop/Assignment2/obj/Debug/net9.0/Assignment2.AssemblyInfoInputs.cache
+/Users/caio/School/sem2/oop/Assignment2/obj/Debug/net9.0/Assignment2.AssemblyInfo.cs
+/Users/caio/School/sem2/oop/Assignment2/obj/Debug/net9.0/Assignment2.csproj.CoreCompileInputs.cache
+/Users/caio/School/sem2/oop/Assignment2/obj/Debug/net9.0/Assignment2.dll
+/Users/caio/School/sem2/oop/Assignment2/obj/Debug/net9.0/refint/Assignment2.dll
+/Users/caio/School/sem2/oop/Assignment2/obj/Debug/net9.0/Assignment2.pdb
+/Users/caio/School/sem2/oop/Assignment2/obj/Debug/net9.0/Assignment2.genruntimeconfig.cache
+/Users/caio/School/sem2/oop/Assignment2/obj/Debug/net9.0/ref/Assignment2.dll
