@@ -8,24 +8,30 @@ public class College
     public College() {
     }
 
-    void AddCourse(Course course) => _courses.Add(course.GetCourseId(), course);
+    public void AddCourse()
+    {
+        Console.Write("Course name: ");
+        var name = Console.ReadLine()!;
+        
+        Console.Write("Total course hours: ");
+        var hours = int.Parse(Console.ReadLine()!); 
+        
+        // _courses.Add(course.GetCourseId(), course);
 
-    void AddStudentToCourse(int courseId, Student studentId) => _courses[courseId].EnrollStudent(studentId);
+        Course c = new(name, hours); 
+        _courses.Add(c.GetCourseId(), c);
+    }
+
+    public void AddStudentToCourse(int courseId, Student studentId) => _courses[courseId].EnrollStudent(studentId);
 
 
     //Helper
     public void EnrollStudent() {
-        Console.WriteLine("what is this students name?");
-        string name = Console.ReadLine();
-        Console.WriteLine("what is this students email?");
-        string email = Console.ReadLine();
+        Console.Write("what is this students name?: ");
+        var name = Console.ReadLine()!;
+        Console.Write("what is this students email?: ");
+        var email = Console.ReadLine()!;
         
-        students.Add(new Student(name, email));
+        students.Add(new(name, email));
     }
-    //2d array holding something or other
-
-    //method to return all students
-    // maybe make a option menu for choosing students?
-
-    //method to return student count and course count
 }
