@@ -12,3 +12,4 @@
 /Users/caio/School/sem2/oop/Assignment2/obj/Debug/net9.0/Assignment2.pdb
 /Users/caio/School/sem2/oop/Assignment2/obj/Debug/net9.0/Assignment2.genruntimeconfig.cache
 /Users/caio/School/sem2/oop/Assignment2/obj/Debug/net9.0/ref/Assignment2.dll
+/Users/caio/School/sem2/oop/Assignment2/obj/Debug/net9.0/Assignment2.sourcelink.json

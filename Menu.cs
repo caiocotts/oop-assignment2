@@ -1,17 +1,25 @@
 namespace Assignment2;
 
-public class MenuOption
+/// <summary>
+/// Represents a menu option which a user can select. Could be an Action or another menu.
+/// </summary>
+public class MenuOption(Action? action, Menu? subMenu)
 {
-    public Action? Action { get; }
-    public Menu? SubMenu { get; }
+    public Action? Action { get; } = action;
+    public Menu? SubMenu { get; } = subMenu;
 
-    private MenuOption(Action? action, Menu? subMenu)
-    {
-        Action = action;
-        SubMenu = subMenu;
-    }
-
+    /// <summary>
+    ///   Creates a new MenuOption object with the action passed as a parameter. The submenu will be null.
+    /// </summary>
+    /// <param name="action"></param>
+    /// <returns>An action to be executed by the user upon selection</returns>
     public static MenuOption FromAction(Action action) => new(action, null);
+
+    /// <summary>
+    ///   Creates a new MenuOption object with the submenu passed as a parameter. The action will be null.
+    /// </summary>
+    /// <param name="submenu"></param>
+    /// <returns>A submenu which can be navigated into upon selection</returns>
     public static MenuOption FromSubmenu(Menu submenu) => new(null, submenu);
 }
 
@@ -33,9 +41,7 @@ public class Menu(string menuString, Dictionary<string, MenuOption> menuOptions)
     public void SelectOption(string? selection)
     {
         Console.Clear();
-        if (string.IsNullOrEmpty(selection) ||
-            !MenuOptions
-                .ContainsKey(selection)) //using out variables is an anti-pattern, so i'm using ContainsKey instead
+        if (string.IsNullOrEmpty(selection) || !MenuOptions.TryGetValue(selection, out var option))
         {
             Console.ForegroundColor = ConsoleColor.Red;
             Console.WriteLine("Invalid entry");
@@ -43,7 +49,6 @@ public class Menu(string menuString, Dictionary<string, MenuOption> menuOptions)
             return;
         }
 
-        var option = MenuOptions[selection];
         if (option.Action != null) option.Action();
         else if (option.SubMenu != null)
         {
