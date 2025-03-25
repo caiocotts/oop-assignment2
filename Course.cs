@@ -10,7 +10,7 @@ public class Course {
         this.courseName = courseName;
         this.courseHours = courseHours;
         courseID++;
-    }
+    } 
     public Course(string courseName) {
         this.courseName = courseName;
         courseHours = 0;
