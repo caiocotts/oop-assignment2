@@ -22,21 +22,21 @@ public class Course {
     }
 
     // GETS
-    public int getCourseID() {
+    public int GetCourseId() {
         return courseID;
     }
-    public string getCourseName() {
+    public string GetCourseName() {
         return courseName;
     }
-    public double getCourseHours() {
+    public double GetCourseHours() {
         return courseHours;
     }
     
     // SETS
-    public void setCourseName(string courseName) {
-        this.courseName = courseName;
+    public void SetCourseName(string newCourseName) {
+        courseName = newCourseName;
     }
-    public void setCourseHours(double courseHours) {
-        this.courseHours = courseHours;
+    public void SetCourseHours(double newCourseHours) {
+        courseHours = newCourseHours;
     }
 }
