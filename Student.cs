@@ -12,6 +12,20 @@ public class Student {
         studentCounter++;
         studentId = studentCounter;
     }
+    public Student()
+    {
+        name = "Unnamed";
+        emailAddress = "No Email Address";
+        studentCounter++; 
+        studentId = studentCounter;
+    }
+    public Student(string name)
+    {
+        this.name = name;
+        emailAddress = "No Email";
+        studentCounter++;
+        studentId = studentCounter;
+    }
     
     //Gets
     public int GetStudentID() {
