@@ -5,17 +5,30 @@ internal static class Program
     internal static void Main()
     {
         Menu? menu = null;
-        menu = new("Parent menu", new()
-        {
-            ["1"] = MenuOption.FromAction(() => Console.WriteLine("Hello There")),
-            ["2"] = MenuOption.FromSubmenu(new("Submenu", new()
-                    {
-                        ["1"] = MenuOption.FromAction(() => Console.WriteLine("General Kenobi")),
-                        ["b"] = MenuOption.FromAction(() => menu.Pop())
-                    }
-                )
-            )
-        });
+        menu = new(
+            """
+            ------ Main Menu ------
+            1 - Add new student
+            2 - Add a new course
+            3 - Register a user to a course
+            4 - Display all students
+            5 - Display all courses
+            6 - Display registrations
+            7 - Save data
+            8 - Load data
+            9 - Exit
+            """, new()
+            {
+                ["1"] = MenuOption.FromAction(() => { }),
+                ["2"] = MenuOption.FromAction(() => { }),
+                ["3"] = MenuOption.FromAction(() => { }),
+                ["4"] = MenuOption.FromAction(() => { }),
+                ["5"] = MenuOption.FromAction(() => { }),
+                ["6"] = MenuOption.FromAction(() => { }),
+                ["7"] = MenuOption.FromAction(() => { }),
+                ["8"] = MenuOption.FromAction(() => { }),
+                ["9"] = MenuOption.FromAction(() => { })
+            });
 
         while (true)
         {
