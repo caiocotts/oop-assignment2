@@ -21,6 +21,12 @@ public class Course {
         courseID++;
     }
 
+    public Course() {
+        courseName = "unnamed";
+        courseHours = 0;
+        courseID++;
+    }
+
     // GETS
     public int GetCourseId() {
         return courseID;
