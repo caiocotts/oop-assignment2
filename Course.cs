@@ -5,7 +5,7 @@ public class Course {
     private int courseID;
     private string courseName;
     private double courseHours;
-    
+    private List<Student> students = [];
     public Course (string courseName, double courseHours) {
         this.courseName = courseName;
         this.courseHours = courseHours;
