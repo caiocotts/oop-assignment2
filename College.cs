@@ -1,8 +1,21 @@
 namespace Assignment2;
 
 public class College {
-    List<Student> students = new List<Student>();
-    List<Course> courses = new List<Course>();
+    private Dictionary<int, Student> _students = new();
+    private Dictionary<int, Course> _courses = new();
+
+    College()
+    {
+    }
+
+    void EnrollStudent(Student student) => _students.Add(student.GetStudentID(), student);
+
+    void AddCourse(Course course) => _courses.Add(course.GetCourseId(), course);
+
+    void AddStudentToCourse(int courseId, int studentId )
+    {
+    }
+    
     
     //2d array holding something or other
     

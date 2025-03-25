@@ -4,6 +4,8 @@ internal static class Program
 {
     internal static void Main()
     {
+
+        var college = College();
         Menu? menu = null;
         menu = new(
             """
@@ -19,7 +21,10 @@ internal static class Program
             9 - Exit
             """, new()
             {
-                ["1"] = MenuOption.FromAction(() => { }),
+                ["1"] = MenuOption.FromAction(() =>
+                {
+                    
+                }),
                 ["2"] = MenuOption.FromAction(() => { }),
                 ["3"] = MenuOption.FromAction(() => { }),
                 ["4"] = MenuOption.FromAction(() => { }),
