@@ -31,5 +31,8 @@ public class Student {
     public void SetEmailAddress(string emailAddress) {
         this.emailAddress = emailAddress;
     }
-    
+
+    public override string ToString() {
+        return "Student Name: " + name + "\nStudent ID: " + studentId + "\nStudent Email: " + emailAddress;
+    }
 }
