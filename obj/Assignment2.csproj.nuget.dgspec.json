@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/Users/caio/School/sem2/oop/Assignment2/Assignment2.csproj": {}
+    "/Users/caio/School/sem2/oop/oop-assignment2/Assignment2.csproj": {}
   },
   "projects": {
-    "/Users/caio/School/sem2/oop/Assignment2/Assignment2.csproj": {
+    "/Users/caio/School/sem2/oop/oop-assignment2/Assignment2.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/caio/School/sem2/oop/Assignment2/Assignment2.csproj",
+        "projectUniqueName": "/Users/caio/School/sem2/oop/oop-assignment2/Assignment2.csproj",
         "projectName": "Assignment2",
-        "projectPath": "/Users/caio/School/sem2/oop/Assignment2/Assignment2.csproj",
+        "projectPath": "/Users/caio/School/sem2/oop/oop-assignment2/Assignment2.csproj",
         "packagesPath": "/Users/caio/.nuget/packages/",
-        "outputPath": "/Users/caio/School/sem2/oop/Assignment2/obj/",
+        "outputPath": "/Users/caio/School/sem2/oop/oop-assignment2/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/Users/caio/.nuget/NuGet/NuGet.Config"
