@@ -46,6 +46,10 @@ public class Course {
         courseHours = newCourseHours;
     }
 
+    // Helpers
+    public void enrollStudent(Student student) {
+        students.Add(student);
+    }
     public override string ToString() {
         return "Course name: " + courseName + "\nCourse ID: " + courseID + "\nCourse hours: " + courseHours;
     }
