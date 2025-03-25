@@ -46,7 +46,7 @@ public class Course {
         courseHours = newCourseHours;
     }
 
-    public String toString() {
+    public override string ToString() {
         return "Course name: " + courseName + "\nCourse ID: " + courseID + "\nCourse hours: " + courseHours;
     }
 }
