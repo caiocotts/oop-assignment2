@@ -19,13 +19,12 @@ internal static class Program
             7 - Save data
             8 - Load data
             9 - Exit
+            
+            > 
             """, new()
             {
-                ["1"] = MenuOption.FromAction(() =>
-                {
-                    
-                }),
-                ["2"] = MenuOption.FromAction(() => { }),
+                ["1"] = MenuOption.FromAction(() => college.EnrollStudent()),
+                ["2"] = MenuOption.FromAction(() => college.AddCourse()),
                 ["3"] = MenuOption.FromAction(() => { }),
                 ["4"] = MenuOption.FromAction(() => { }),
                 ["5"] = MenuOption.FromAction(() => { }),
