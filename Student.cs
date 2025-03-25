@@ -12,4 +12,24 @@ public class Student {
         studentCounter++;
         studentId = studentCounter;
     }
+    
+    //Gets
+    public int GetStudentID() {
+        return studentId;
+    }
+    public string GetName() {
+        return name;
+    }
+    public string GetEmailAddress() {
+        return emailAddress;
+    }
+    
+    //Sets
+    public void SetName(string name) {
+        this.name = name;
+    }
+    public void SetEmailAddress(string emailAddress) {
+        this.emailAddress = emailAddress;
+    }
+    
 }
