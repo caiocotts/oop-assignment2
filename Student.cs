@@ -2,14 +2,14 @@ namespace Assignment2;
 
 public class Student {
     private static int studentCounter;
-    private int studentID;
+    private int studentId;
     private string name;
-    private string enrolledCourses;
+    private string emailAddress;
 
-    public Student(string name, string enrolledCourses) {
+    public Student(string name, string emailAddress) {
         this.name = name;
-        this.enrolledCourses = enrolledCourses;
+        this.emailAddress = emailAddress;
         studentCounter++;
-        studentID = studentCounter;
+        studentId = studentCounter;
     }
 }
