@@ -1,6 +1,7 @@
 namespace Assignment2;
 
 public class Course {
+    private static int courseCounter;
     private int courseID;
     private string courseName;
     private double courseHours;
@@ -20,7 +21,6 @@ public class Course {
         this.courseHours = courseHours;
         courseID++;
     }
-
     public Course() {
         courseName = "unnamed";
         courseHours = 0;
@@ -44,5 +44,9 @@ public class Course {
     }
     public void SetCourseHours(double newCourseHours) {
         courseHours = newCourseHours;
+    }
+
+    public String toString() {
+        return "Course name: " + courseName + "\nCourse ID: " + courseID + "\nCourse hours: " + courseHours;
     }
 }
