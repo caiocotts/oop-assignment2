@@ -2,7 +2,7 @@ namespace Assignment2;
 
 public class College
 {
-    public List<Student> students = new();
+    public Dictionary<int, Student> students = new();
     private Dictionary<int, Course> _courses = new();
 
     public College() {
@@ -22,8 +22,25 @@ public class College
         _courses.Add(c.GetCourseId(), c);
     }
 
-    public void AddStudentToCourse(int courseId, Student studentId) => _courses[courseId].EnrollStudent(studentId);
-
+    public void AddStudentToCourse() {
+        //print courses
+        Console.WriteLine("courses: ");
+        foreach (var course in _courses) {
+            Console.WriteLine($"{course.Key} = {course.Value.GetCourseName()}");
+        }
+        Console.WriteLine("enter course you number you would like to add students too.");
+        int courseId = int.Parse(Console.ReadLine()!);
+        
+        //print students
+        Console.WriteLine("Students:");
+        foreach (var a in students) {
+            Console.WriteLine(a.Value.GetStudentID());
+        }
+        Console.WriteLine("what Student would you like to add?");
+        int studentSelection = Int32.Parse(Console.ReadLine()!);
+        
+        _courses[courseId].EnrollStudent(students[studentSelection]);
+    }
 
     //Helper
     public void EnrollStudent() {
@@ -32,6 +49,12 @@ public class College
         Console.Write("what is this students email?: ");
         var email = Console.ReadLine()!;
         
-        students.Add(new(name, email));
+        Student tempS = new Student(name, email);
+        students.Add(tempS.GetStudentID() ,tempS);
     }
+
+    public void DisplayStudents() {
+        
+    }
+    public void DisplayCourses() {}
 }
