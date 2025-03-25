@@ -47,7 +47,7 @@ public class Course {
     }
 
     // Helpers
-    public void enrollStudent(Student student) {
+    public void EnrollStudent(Student student) {
         students.Add(student);
     }
     public override string ToString() {
