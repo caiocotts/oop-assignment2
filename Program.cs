@@ -5,7 +5,7 @@ internal static class Program
     internal static void Main()
     {
 
-        var college = College();
+        var college = new College();
         Menu? menu = null;
         menu = new(
             """

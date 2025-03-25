@@ -4,7 +4,7 @@ public class College {
     private Dictionary<int, Student> _students = new();
     private Dictionary<int, Course> _courses = new();
 
-    College()
+    public College()
     {
     }
 
