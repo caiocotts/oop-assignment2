@@ -10,8 +10,10 @@ internal static class Program
         // college.EnrollStudent(); //Working
         // college.AddCourse(); //Working
         // college.AddStudentToCourse(); //doesnt work properly without atleast: 1 student & 1 Course
+        // college.DisplayStudents(); //working
+        // college.DisplayCourses(); //working
 
-        Menu? menu = null;
+        /*Menu? menu = null;
         menu = new(
             """
             ------ Main Menu ------
@@ -43,6 +45,6 @@ internal static class Program
         {
             menu.Display();
             menu.SelectOption(Console.ReadLine());
-        }
+        }*/
     }
 }
