@@ -61,7 +61,7 @@ public class College
     }
 
     public void DisplayCourses() {
-        Console.WriteLine("Students:");
+        Console.WriteLine("Courses:");
         foreach (var i in _courses) {
             Console.WriteLine($"{i.Key}: {i.Value}");
         }
