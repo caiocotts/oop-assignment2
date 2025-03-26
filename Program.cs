@@ -32,10 +32,10 @@ internal static class Program
             {
                 ["1"] = MenuOption.FromAction(() => college.EnrollStudent()),
                 ["2"] = MenuOption.FromAction(() => college.AddCourse()),
-                ["3"] = MenuOption.FromAction(() => { }),
-                ["4"] = MenuOption.FromAction(() => { }),
-                ["5"] = MenuOption.FromAction(() => { college.DisplayCourses(); }),
-                ["6"] = MenuOption.FromAction(() => { }),
+                ["3"] = MenuOption.FromAction(() => college.AddStudentToCourse()),
+                ["4"] = MenuOption.FromAction(() => college.DisplayStudents()),
+                ["5"] = MenuOption.FromAction(() => college.DisplayCourses()),
+                ["6"] = MenuOption.FromAction(() => college.DisplayRegistration()),
                 ["7"] = MenuOption.FromAction(() => { }),
                 ["8"] = MenuOption.FromAction(() => { }),
                 ["9"] = MenuOption.FromAction(() => { })

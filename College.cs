@@ -8,9 +8,7 @@ public class College
     [JsonInclude]
     private Dictionary<int, Course> _courses = new();
 
-    public College() {
-    }
-
+    public College() { }
     public void AddCourse()
     {
         Console.Write("Course name: ");
@@ -24,7 +22,6 @@ public class College
         Course c = new(name, hours); 
         _courses.Add(c.GetCourseId(), c);
     }
-
     public void AddStudentToCourse() {
         //print courses
         Console.WriteLine("courses: ");
@@ -44,7 +41,6 @@ public class College
         
         _courses[courseId].EnrollStudent(students[studentSelection]);
     }
-
     //Helper
     public void EnrollStudent() {
         Console.Write("what is this students name?: ");
@@ -55,18 +51,24 @@ public class College
         Student tempS = new Student(name, email);
         students.Add(tempS.GetStudentID() ,tempS);
     }
-
     public void DisplayStudents() {
         Console.WriteLine("Students:");
         foreach (var i in students) {
             Console.WriteLine($"{i.Key}: {i.Value}");
         }
     }
-
     public void DisplayCourses() {
         Console.WriteLine("Courses:");
         foreach (var i in _courses) {
             Console.WriteLine($"{i.Key}: {i.Value}");
+        }
+    }
+
+    public void DisplayRegistration() {
+        foreach (var course in _courses) {
+            Console.WriteLine($"Course  {course.Value.GetCourseName()}");
+            Console.WriteLine($"Student:");
+            course.Value.DisplayStudentsString();
         }
     }
 }

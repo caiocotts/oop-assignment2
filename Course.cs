@@ -44,7 +44,7 @@ public class Course {
         return courseHours;
     }
 
-    public void getStudentsString() {
+    public void DisplayStudentsString() {
         Console.WriteLine($"Students of {courseName}:");
         foreach (Student student in students) {
             Console.WriteLine(student);
