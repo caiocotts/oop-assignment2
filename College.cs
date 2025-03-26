@@ -26,7 +26,7 @@ public class College
         //print courses
         Console.WriteLine("courses: ");
         foreach (var course in _courses) {
-            Console.WriteLine($"{course.Key} = {course.Value.GetCourseName()}");
+            Console.WriteLine($"{course.Key}, {course.Value.GetCourseName()}");
         }
         Console.WriteLine("enter course you number you would like to add students too.");
         int courseId = int.Parse(Console.ReadLine()!);

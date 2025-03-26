@@ -1,4 +1,5 @@
-﻿namespace Assignment2;
+﻿
+namespace Assignment2;
 
 internal static class Program
 {
@@ -6,6 +7,10 @@ internal static class Program
     {
 
         var college = new College();
+        // college.EnrollStudent(); //Working
+        // college.AddCourse(); //Working
+        // college.AddStudentToCourse(); //doesnt work properly without atleast: 1 student & 1 Course
+
         Menu? menu = null;
         menu = new(
             """
@@ -33,7 +38,7 @@ internal static class Program
                 ["8"] = MenuOption.FromAction(() => { }),
                 ["9"] = MenuOption.FromAction(() => { })
             });
-
+        
         while (true)
         {
             menu.Display();
