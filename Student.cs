@@ -2,56 +2,66 @@ using System.Text.Json.Serialization;
 
 namespace Assignment2;
 
-public class Student {
-    private static int studentCounter ;
-    [JsonInclude]
-    private int studentId;
-    [JsonInclude]
-    private string name;
-    [JsonInclude]
-    private string emailAddress;
+public class Student
+{
+    private static int _studentCounter;
+    [JsonInclude] private int _studentId;
+    [JsonInclude] private string _name;
+    [JsonInclude] private string _emailAddress;
 
-    public Student(string name, string emailAddress) {
-        this.name = name;
-        this.emailAddress = emailAddress;
-        studentCounter++;
-        studentId = studentCounter;
+    public Student(string name, string emailAddress)
+    {
+        _name = name;
+        _emailAddress = emailAddress;
+        _studentCounter++;
+        _studentId = _studentCounter;
     }
+
     public Student()
     {
-        name = "Unnamed";
-        emailAddress = "No Email Address";
-        studentCounter++; 
-        studentId = studentCounter;
-    }
-    public Student(string name)
-    {
-        this.name = name;
-        emailAddress = "No Email";
-        studentCounter++;
-        studentId = studentCounter;
-    }
-    
-    //Gets
-    public int GetStudentID() {
-        return studentId;
-    }
-    public string GetName() {
-        return name;
-    }
-    public string GetEmailAddress() {
-        return emailAddress;
-    }
-    
-    //Sets
-    public void SetName(string name) {
-        this.name = name;
-    }
-    public void SetEmailAddress(string emailAddress) {
-        this.emailAddress = emailAddress;
+        _name = "Unnamed";
+        _emailAddress = "No Email Address";
+        _studentCounter++;
+        _studentId = _studentCounter;
     }
 
-    public override string ToString() {
-        return "\n  Student Name: " + name + "\n  Student ID: " + studentId + "\n  Student Email: " + emailAddress;
+    public Student(string name)
+    {
+        _name = name;
+        _emailAddress = "No Email";
+        _studentCounter++;
+        _studentId = _studentCounter;
+    }
+
+    //Gets
+    public int GetStudentId()
+    {
+        return _studentId;
+    }
+
+    public string GetName()
+    {
+        return _name;
+    }
+
+    public string GetEmailAddress()
+    {
+        return _emailAddress;
+    }
+
+    //Sets
+    public void SetName(string name)
+    {
+        _name = name;
+    }
+
+    public void SetEmailAddress(string emailAddress)
+    {
+        _emailAddress = emailAddress;
+    }
+
+    public override string ToString()
+    {
+        return "\n  Student Name: " + _name + "\n  Student ID: " + _studentId + "\n  Student Email: " + _emailAddress;
     }
 }

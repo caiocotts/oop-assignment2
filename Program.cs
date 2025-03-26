@@ -5,7 +5,7 @@ internal static class Program
     internal static void Main()
     {
         var college = new College();
-        
+
         if (File.Exists("data.json")) college.Load();
 
         Menu? menu = null;
@@ -35,7 +35,7 @@ internal static class Program
                 ["8"] = MenuOption.FromAction(() => college.Load()),
                 ["9"] = MenuOption.FromAction(() => menu.Pop())
             });
-        
+
 
         while (true)
         {
