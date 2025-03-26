@@ -15,22 +15,24 @@ public class Course {
     public Course (string courseName, double courseHours) {
         this.courseName = courseName;
         this.courseHours = courseHours;
-        courseID++;
+        courseID = ++courseCounter;
     } 
     public Course(string courseName) {
         this.courseName = courseName;
         courseHours = 0;
-        courseID++;
+        courseID = ++courseCounter;
+
     }
     public Course(double courseHours) {
         courseName = "unnamed";
         this.courseHours = courseHours;
-        courseID++;
+        courseID = ++courseCounter;
+
     }
     public Course() {
         courseName = "unnamed";
         courseHours = 0;
-        courseID++;
+        courseID = ++courseCounter;
     }
 
     // GETS

@@ -1,17 +1,12 @@
-﻿using System.Text.Json;
-
-namespace Assignment2;
+﻿namespace Assignment2;
 
 internal static class Program
 {
     internal static void Main()
     {
         var college = new College();
-        // college.EnrollStudent(); //Working
-        // college.AddCourse(); //Working
-        // college.AddStudentToCourse(); //doesnt work properly without atleast: 1 student & 1 Course
-        // college.DisplayStudents(); //working
-        // college.DisplayCourses(); //working
+        
+        if (File.Exists("data.json")) college.Load();
 
         Menu? menu = null;
         menu = new(
@@ -36,32 +31,16 @@ internal static class Program
                 ["4"] = MenuOption.FromAction(() => college.DisplayStudents()),
                 ["5"] = MenuOption.FromAction(() => college.DisplayCourses()),
                 ["6"] = MenuOption.FromAction(() => college.DisplayRegistration()),
-                ["7"] = MenuOption.FromAction(() => { }),
-                ["8"] = MenuOption.FromAction(() => { }),
-                ["9"] = MenuOption.FromAction(() => { })
+                ["7"] = MenuOption.FromAction(() => college.Save()),
+                ["8"] = MenuOption.FromAction(() => college.Load()),
+                ["9"] = MenuOption.FromAction(() => menu.Pop())
             });
         
-        college.AddCourse();
-        college.EnrollStudent();
 
-        // Student s = new("Caio", "caio@cotts.com.br");
-        //
-        // File.WriteAllText("file.json", JsonSerializer.Serialize(new Student("Caio", "caio@cotts.com.br")));
-        //
-        // var s2 = JsonSerializer.Deserialize<Student>(File.ReadAllText("file.json"))!;
-        // Console.WriteLine(s2.ToString());
-        
-        
-        File.WriteAllText("file.json", JsonSerializer.Serialize(college));
-        
-        var c = JsonSerializer.Deserialize<College>(File.ReadAllText("file.json"))!;
-        Console.WriteLine(college);
-
-
-        // while (true)
-        // {
-        //     menu.Display();
-        //     menu.SelectOption(Console.ReadLine());
-        // }
+        while (true)
+        {
+            menu.Display();
+            menu.SelectOption(Console.ReadLine());
+        }
     }
 }

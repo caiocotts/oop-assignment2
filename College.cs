@@ -1,3 +1,4 @@
+using System.Text.Json;
 using System.Text.Json.Serialization;
 
 namespace Assignment2;
@@ -70,5 +71,14 @@ public class College
             Console.WriteLine($"Student:");
             course.Value.DisplayStudentsString();
         }
+    }
+    
+    public void Save() => File.WriteAllText("data.json", JsonSerializer.Serialize(this));
+
+    public void Load()
+    {
+        var c = JsonSerializer.Deserialize<College>(File.ReadAllText("data.json"))!;
+        students = c.students;
+        _courses = c._courses;
     }
 }
