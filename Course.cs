@@ -1,10 +1,16 @@
+using System.Text.Json.Serialization;
+
 namespace Assignment2;
 
 public class Course {
     private static int courseCounter;
+    [JsonInclude]
     private int courseID;
+    [JsonInclude]
     private string courseName;
+    [JsonInclude]
     private double courseHours;
+    [JsonInclude]
     private List<Student> students = [];
     public Course (string courseName, double courseHours) {
         this.courseName = courseName;

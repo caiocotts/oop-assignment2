@@ -1,9 +1,14 @@
+using System.Text.Json.Serialization;
+
 namespace Assignment2;
 
 public class Student {
-    private static int studentCounter;
+    private static int studentCounter ;
+    [JsonInclude]
     private int studentId;
+    [JsonInclude]
     private string name;
+    [JsonInclude]
     private string emailAddress;
 
     public Student(string name, string emailAddress) {

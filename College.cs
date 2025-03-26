@@ -1,8 +1,11 @@
+using System.Text.Json.Serialization;
+
 namespace Assignment2;
 
 public class College
-{
-    public Dictionary<int, Student> students = new();
+{   [JsonInclude] 
+    private Dictionary<int, Student> students = new();
+    [JsonInclude]
     private Dictionary<int, Course> _courses = new();
 
     public College() {

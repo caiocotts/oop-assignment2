@@ -1,11 +1,11 @@
-﻿
+﻿using System.Text.Json;
+
 namespace Assignment2;
 
 internal static class Program
 {
     internal static void Main()
     {
-
         var college = new College();
         // college.EnrollStudent(); //Working
         // college.AddCourse(); //Working
@@ -13,7 +13,7 @@ internal static class Program
         // college.DisplayStudents(); //working
         // college.DisplayCourses(); //working
 
-        /*Menu? menu = null;
+        Menu? menu = null;
         menu = new(
             """
             ------ Main Menu ------
@@ -26,7 +26,7 @@ internal static class Program
             7 - Save data
             8 - Load data
             9 - Exit
-            
+
             > 
             """, new()
             {
@@ -34,17 +34,34 @@ internal static class Program
                 ["2"] = MenuOption.FromAction(() => college.AddCourse()),
                 ["3"] = MenuOption.FromAction(() => { }),
                 ["4"] = MenuOption.FromAction(() => { }),
-                ["5"] = MenuOption.FromAction(() => { }),
+                ["5"] = MenuOption.FromAction(() => { college.DisplayCourses(); }),
                 ["6"] = MenuOption.FromAction(() => { }),
                 ["7"] = MenuOption.FromAction(() => { }),
                 ["8"] = MenuOption.FromAction(() => { }),
                 ["9"] = MenuOption.FromAction(() => { })
             });
         
-        while (true)
-        {
-            menu.Display();
-            menu.SelectOption(Console.ReadLine());
-        }*/
+        college.AddCourse();
+        college.EnrollStudent();
+
+        // Student s = new("Caio", "caio@cotts.com.br");
+        //
+        // File.WriteAllText("file.json", JsonSerializer.Serialize(new Student("Caio", "caio@cotts.com.br")));
+        //
+        // var s2 = JsonSerializer.Deserialize<Student>(File.ReadAllText("file.json"))!;
+        // Console.WriteLine(s2.ToString());
+        
+        
+        File.WriteAllText("file.json", JsonSerializer.Serialize(college));
+        
+        var c = JsonSerializer.Deserialize<College>(File.ReadAllText("file.json"))!;
+        Console.WriteLine(college);
+
+
+        // while (true)
+        // {
+        //     menu.Display();
+        //     menu.SelectOption(Console.ReadLine());
+        // }
     }
 }
