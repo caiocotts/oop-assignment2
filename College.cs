@@ -17,7 +17,7 @@ public class College
         var hours = int.Parse(Console.ReadLine()!); 
         
         // _courses.Add(course.GetCourseId(), course);
-
+        //O'Neal Is the Goat
         Course c = new(name, hours); 
         _courses.Add(c.GetCourseId(), c);
     }
