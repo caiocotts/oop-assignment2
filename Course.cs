@@ -51,6 +51,6 @@ public class Course {
         students.Add(student);
     }
     public override string ToString() {
-        return "Course name: " + courseName + "\nCourse ID: " + courseID + "\nCourse hours: " + courseHours;
+        return "\n   Course name: " + courseName + "\n   Course ID: " + courseID + "\n   Course hours: " + courseHours;
     }
 }
