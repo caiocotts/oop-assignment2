@@ -54,7 +54,16 @@ public class College
     }
 
     public void DisplayStudents() {
-        
+        Console.WriteLine("Students:");
+        foreach (var i in students) {
+            Console.WriteLine($"{i.Key}: {i.Value}");
+        }
     }
-    public void DisplayCourses() {}
+
+    public void DisplayCourses() {
+        Console.WriteLine("Students:");
+        foreach (var i in _courses) {
+            Console.WriteLine($"{i.Key}: {i.Value}");
+        }
+    }
 }
