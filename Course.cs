@@ -37,6 +37,13 @@ public class Course {
     public double GetCourseHours() {
         return courseHours;
     }
+
+    public void getStudentsString() {
+        Console.WriteLine($"Students of {courseName}:");
+        foreach (Student student in students) {
+            Console.WriteLine(student);
+        }
+    }
     
     // SETS
     public void SetCourseName(string newCourseName) {
