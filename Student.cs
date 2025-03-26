@@ -47,6 +47,6 @@ public class Student {
     }
 
     public override string ToString() {
-        return "Student Name: " + name + "\nStudent ID: " + studentId + "\nStudent Email: " + emailAddress;
+        return "\n  Student Name: " + name + "\n  Student ID: " + studentId + "\n  Student Email: " + emailAddress;
     }
 }
