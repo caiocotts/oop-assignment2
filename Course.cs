@@ -54,14 +54,8 @@ public class Course
         return _courseHours;
     }
 
-    public void DisplayStudentsString()
-    {
-        Console.WriteLine($"Students of {_courseName}:");
-        foreach (var student in _students)
-        {
-            Console.WriteLine(student);
-        }
-    }
+    public List<Student> GetStudents() => _students;
+
 
     // SETS
     public void SetCourseName(string newCourseName)
@@ -80,8 +74,18 @@ public class Course
         _students.Add(student);
     }
 
+    public void DisplayStudentsString()
+    {
+        Console.WriteLine($"Students of {_courseName}:");
+        foreach (var student in _students)
+        {
+            Console.WriteLine($"{student}\n");
+        }
+    }
+
     public override string ToString()
     {
-        return "\n   Course name: " + _courseName + "\n   Course ID: " + _courseId + "\n   Course hours: " + _courseHours;
+        return "\n\tCourse name: " + _courseName + "\n\tCourse ID: " + _courseId + "\n\tCourse hours: " +
+               _courseHours;
     }
 }

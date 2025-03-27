@@ -62,6 +62,6 @@ public class Student
 
     public override string ToString()
     {
-        return "\n  Student Name: " + _name + "\n  Student ID: " + _studentId + "\n  Student Email: " + _emailAddress;
+        return "\n\tStudent Name: " + _name + "\n\tStudent ID: " + _studentId + "\n\tStudent Email: " + _emailAddress;
     }
 }

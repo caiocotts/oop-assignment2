@@ -4,6 +4,7 @@ internal static class Program
 {
     internal static void Main()
     {
+        // Console.Clear();
         var college = new College();
 
         if (File.Exists("data.json")) college.Load();

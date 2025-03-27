@@ -44,7 +44,7 @@ public class Menu(string menuString, Dictionary<string, MenuOption> menuOptions)
         if (string.IsNullOrEmpty(selection) || !MenuOptions.TryGetValue(selection, out var option))
         {
             Console.ForegroundColor = ConsoleColor.Red;
-            Console.WriteLine("Invalid entry");
+            Console.WriteLine("invalid entry");
             Console.ResetColor();
             return;
         }
