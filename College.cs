@@ -105,7 +105,7 @@ public class College
             return;
         }
 
-        course!.EnrollStudent(student!);
+        course.EnrollStudent(student!);
         Console.Clear();
     }
 
@@ -172,6 +172,7 @@ public class College
             Console.ResetColor();
             return;
         }
+
         foreach (var course in _courses)
         {
             Console.WriteLine($"Course Name: {course.Value.GetCourseName()}");
