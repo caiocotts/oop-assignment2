@@ -164,6 +164,14 @@ public class College
 
     public void DisplayRegistration()
     {
+        if (_courses.Count == 0)
+        {
+            Console.Clear();
+            Console.ForegroundColor = ConsoleColor.Yellow;
+            Console.WriteLine("there are no courses to display");
+            Console.ResetColor();
+            return;
+        }
         foreach (var course in _courses)
         {
             Console.WriteLine($"Course Name: {course.Value.GetCourseName()}");
