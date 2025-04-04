@@ -1,4 +1,6 @@
-﻿namespace Assignment2;
+﻿//Name: O'Neal Jean, Caio Cotts, Keagan Cameron 
+//Student ID: O'Neal's Student ID: 101-544-778 || Caio's Student ID: 101-571-045 || Keagan's Student ID: 101-543-441 
+namespace Assignment2;
 
 internal static class Program
 {
@@ -25,6 +27,7 @@ internal static class Program
 
             > 
             """, new()
+            //Using the Provided Library (credits to Caio) we have managed to use it to implement a menu driven application (using the library baseplate.)
             {
                 ["1"] = MenuOption.FromAction(() => college.EnrollStudent()),
                 ["2"] = MenuOption.FromAction(() => college.AddCourse()),
