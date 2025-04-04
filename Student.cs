@@ -1,4 +1,4 @@
-using System.Text.Json.Serialization;
+using System.Text.Json.Serialization; //imports json serializer
 
 namespace Assignment2;
 
@@ -7,7 +7,7 @@ public class Student
     private static int _studentCounter;
     [JsonInclude] private int _studentId;
     [JsonInclude] private string _name;
-    [JsonInclude] private string _emailAddress;
+    [JsonInclude] private string _emailAddress; // include's these as a json object's
 
     public Student(string name, string emailAddress)
     {
