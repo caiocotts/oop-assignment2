@@ -29,14 +29,14 @@ internal static class Program
             """, new()
             //Using the Provided Library (credits to Caio) we have managed to use it to implement a menu driven application (using the library baseplate.)
             {
-                ["1"] = MenuOption.FromAction(() => college.EnrollStudent()),
-                ["2"] = MenuOption.FromAction(() => college.AddCourse()),
-                ["3"] = MenuOption.FromAction(() => college.AddStudentToCourse()),
-                ["4"] = MenuOption.FromAction(() => college.DisplayStudents()),
-                ["5"] = MenuOption.FromAction(() => college.DisplayCourses()),
-                ["6"] = MenuOption.FromAction(() => college.DisplayRegistration()),
-                ["7"] = MenuOption.FromAction(() => college.Save()),
-                ["8"] = MenuOption.FromAction(() => college.Load()),
+                ["1"] = MenuOption.FromAction(() => college.EnrollStudent()), // enrolls a student
+                ["2"] = MenuOption.FromAction(() => college.AddCourse()), // make's a course
+                ["3"] = MenuOption.FromAction(() => college.AddStudentToCourse()), // add a student too a course
+                ["4"] = MenuOption.FromAction(() => college.DisplayStudents()), // display students
+                ["5"] = MenuOption.FromAction(() => college.DisplayCourses()), // display courses
+                ["6"] = MenuOption.FromAction(() => college.DisplayRegistration()), // display course's and student's in them
+                ["7"] = MenuOption.FromAction(() => college.Save()), // saves to json file
+                ["8"] = MenuOption.FromAction(() => college.Load()), // load's data from json file
                 ["9"] = MenuOption.FromAction(() => menu.Pop())
             });
 
