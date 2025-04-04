@@ -1,4 +1,4 @@
-﻿//Name: O'Neal Jean, Caio Cotts, Keagan Cameron 
+//Name: O'Neal Jean, Caio Cotts, Keagan Cameron 
 //Student ID: O'Neal's Student ID: 101-544-778 || Caio's Student ID: 101-571-045 || Keagan's Student ID: 101-543-441 
 namespace Assignment2;
 
