@@ -192,8 +192,7 @@ public class College
 
     public void Load()
     {
-        var c = JsonSerializer.Deserialize<College>(File.ReadAllText("data.json"))!;
-        _students = c._students;
-        _courses = c._courses;
+        var college = JsonSerializer.Deserialize<College>(File.ReadAllText("data.json"))!;
+        (_students, _courses) = (college._students, college._courses);
     }
 }
