@@ -87,7 +87,8 @@ public class College
         Console.WriteLine("Students:");
         foreach (var a in _students)
         {
-            Console.WriteLine(a.Value.GetStudentId());
+            Console.WriteLine(
+                $"{a.Value.GetStudentId()} {a.Value.GetName()}");
         }
 
         Console.Write("What student would you like to add?: ");
