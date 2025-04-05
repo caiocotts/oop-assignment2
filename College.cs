@@ -105,7 +105,7 @@ public class College
             return;
         }
 
-        course.EnrollStudent(student!);
+        course.EnrollStudent(student);
         Console.Clear();
     }
 
