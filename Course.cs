@@ -84,7 +84,11 @@ public class Course
 
     public override string ToString()
     {
-        return "\n\tCourse name: " + _courseName + "\n\tCourse ID: " + _courseId + "\n\tCourse hours: " +
-               _courseHours;
+        return $"""
+                
+                	Course name: {_courseName}
+                	Course ID: {_courseId}
+                	Course hours: {_courseHours}
+                """;
     }
 }
