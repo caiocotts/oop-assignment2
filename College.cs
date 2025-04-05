@@ -6,6 +6,9 @@ namespace Assignment2;
 
 public class College
 {
+    // instead of using a 2d array, we are using a dictionary to store the students and courses
+    // this makes fetching student and course information easier and more efficient, as we can use the student ID and course ID as keys
+    // and get the info we need without having to loop through a whole array
     [JsonInclude] private Dictionary<int, Student> _students = new();
     [JsonInclude] private Dictionary<int, Course> _courses = new();
 
@@ -33,6 +36,7 @@ public class College
 
     public void AddStudentToCourse()
     {
+        // check if there are no courses
         if (_courses.Count == 0)
         {
             Console.Clear();
@@ -42,6 +46,7 @@ public class College
             return;
         }
 
+        // check if there are no students
         if (_students.Count == 0)
         {
             Console.Clear();
@@ -109,7 +114,6 @@ public class College
         Console.Clear();
     }
 
-    //Helper
     public void EnrollStudent()
     {
         Console.Write("What is this student's name?: ");
