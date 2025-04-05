@@ -188,11 +188,16 @@ public class College
         }
     }
 
-    public void Save() => File.WriteAllText("data.json", JsonSerializer.Serialize(this));
+    public void Save()
+    {
+        File.WriteAllText("data.json", JsonSerializer.Serialize(this));
+        Console.WriteLine("Data saved\n");
+    }
 
     public void Load()
     {
         var college = JsonSerializer.Deserialize<College>(File.ReadAllText("data.json"))!;
         (_students, _courses) = (college._students, college._courses);
+        Console.WriteLine("Data loaded\n");
     }
 }
