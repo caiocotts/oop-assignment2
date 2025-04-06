@@ -27,7 +27,7 @@ public class MenuOption(Action? action, Menu? subMenu)
 /// Represents a terminal user interface menu, which has 0 or many options and submenus.
 /// </summary>
 /// <param name="menuString">A string that is used to display menu options to the console.</param>
-/// <param name="menuOptions">A dictionary which holds each menu option what the user can select.</param>
+/// <param name="menuOptions">A dictionary which holds each menu option that the user can select.</param>
 public class Menu(string menuString, Dictionary<string, MenuOption> menuOptions)
 {
     private Menu? _previousMenu;
